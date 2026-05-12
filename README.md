@@ -25,7 +25,6 @@ The following datasets are required but **not included** in this repository.
   - `clapnq_dev_answerable.jsonl`
   - `clapnq_dev_unanswerable.jsonl`
  
-- **HPO Paper results** (Orbach et al., 2025) — generation outputs used for qualitative comparison in Phase 4, available at [github.com/IBM/rag-hpo-bench](https://github.com/IBM/rag-hpo-bench)
 
 Place all data files in a `data/` folder at the repo root.
 
