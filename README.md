@@ -12,6 +12,11 @@ pip install -r requirements.txt
 
 VerbatimRAG is included in `requirements.txt` and installed automatically from GitHub.
 
+Create a `.env` file at the repo root:
+```
+OPENAI_API_KEY=your_key_here
+```
+
 ## Data
 
 The following datasets are required but **not included** in this repository.
@@ -19,6 +24,8 @@ The following datasets are required but **not included** in this repository.
 - **CLAPNQ** — [github.com/primeqa/clapnq](https://github.com/primeqa/clapnq)
   - `clapnq_dev_answerable.jsonl`
   - `clapnq_dev_unanswerable.jsonl`
+ 
+- **HPO Paper results** (Orbach et al., 2025) — generation outputs used for qualitative comparison in Phase 4, available at [github.com/IBM/rag-hpo-bench](https://github.com/IBM/rag-hpo-bench)
 
 Place all data files in a `data/` folder at the repo root.
 
@@ -26,10 +33,11 @@ Place all data files in a `data/` folder at the repo root.
 
 ```
 notebooks/
+├── database_generation/   # Notebook for building Milvus vector database
 ├── phase1/   # Automatic evaluation: retrieval, extraction, full RAG pipeline
-├── phase2/   # Extraction evaluation against CLAPNQ sentence-level ground truth (IoU)
-├── phase3/   # Sample selection and manual annotation of 100 examples
-├── phase4/   # Qualitative comparison: VerbatimRAG vs. generative systems
+├── phase2/   # Extraction evaluation against CLAPNQ sentence-level ground truth
+├── phase3/   # Annotation postprocessing
+├── phase4/   # Re-evaluation on fine-grained self-annotated spans
 ```
 
 ## License
