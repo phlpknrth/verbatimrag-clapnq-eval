@@ -17,6 +17,9 @@ Create a `.env` file at the repo root:
 OPENAI_API_KEY=your_key_here
 ```
 
+## Requirements
+- Linux or WSL (Windows Subsystem for Linux) — required for Milvus
+
 ## Data
 
 The following datasets are required but **not included** in this repository.
